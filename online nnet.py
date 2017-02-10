@@ -12,7 +12,6 @@ import scipy as sp
 import random
 import math
 
-os.chdir('/users/idlirshkurti/documents/machine learning practical')
 my_data = np.genfromtxt('bioresponseTrain.csv', delimiter=',')
 
 y = np.array(my_data[:,:1])

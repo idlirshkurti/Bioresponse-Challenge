@@ -1,4 +1,3 @@
-import os
 import csv
 import numpy as np
 import sklearn
@@ -12,7 +11,7 @@ import scipy as sp
 import random
 import math
 
-my_data = np.genfromtxt('bioresponseTrain.csv', delimiter=',')
+my_data = np.genfromtxt('train.csv', delimiter=',')
 
 y = np.array(my_data[:,:1])
 y.shape = (y.shape[0],)
@@ -131,7 +130,3 @@ df = pd.DataFrame(dict(fpr=fpr, tpr=tpr))
 ggplot(df, aes(x='fpr', y='tpr')) +\
     geom_line() +\
     geom_abline(linetype='dashed')
-
-
-
-
